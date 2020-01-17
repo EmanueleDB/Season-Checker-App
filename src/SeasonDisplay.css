@@ -27,10 +27,22 @@
 }
 
 .season-display {
-  display: flex;
+  display: grid;
   justify-content: center;
-  align-items: center;
   height: 100vh;
+  text-align: center;
+}
+
+.season-display h2 {
+    font-size: 45px;
+
+}
+
+.season-display h1 {
+    align-items: center;
+    font-size: 40px;
+
+    
 }
 
 .winter {
@@ -42,7 +54,7 @@
 }
 
 .autumn {
-  background-color: brown;
+  background-color: #805700
 }
 
 .spring {
