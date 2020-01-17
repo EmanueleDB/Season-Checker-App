@@ -7,21 +7,36 @@ const seasonConfig = {
     iconName: "sun"
   },
   winter: {
-    text: `Burr, it is chilly`,
+    text: `Let's make a snowman`,
     iconName: "snowflake"
+  },
+  autumn: {
+    text: `Let's go hike in the forest`,
+    iconName: "envira"
+  },
+  spring: {
+    text: `Let's go sit on a terrace`,
+    iconName: "lemon"
   }
 };
 
 const getSeason = (lat, month) => {
-  if (month > 2 && month < 9) {
+  if ([11, 0, 1].includes(month)) {
+    return lat > 0 ? "winter" : "summer";
+  } else if ([2, 3, 4].includes(month)) {
+    return lat > 0 ? "spring" : "autumn";
+  } else if ([5, 6, 7].includes(month)) {
     return lat > 0 ? "summer" : "winter";
   } else {
-    return lat > 0 ? "winter" : "summer";
+    return lat > 0 ? "autumn" : "spring";
   }
 };
 
 const SeasonDisplay = props => {
-  const season = getSeason(props.lat, new Date().getMonth());
+  const month = Math.floor(Math.random() * 12);
+  const season = getSeason(props.lat, month);
+  console.log(month);
+
   const { text, iconName } = seasonConfig[season];
 
   return (

@@ -11,25 +11,40 @@
 }
 
 .season-display.winter i {
-    color: blue
+  color: blue;
 }
 
 .season-display.summer i {
-    color: red
+  color: red;
 }
 
+.season-display.autumn i {
+  color: green;
+}
+
+.season-display.spring i {
+  color: yellow;
+}
 
 .season-display {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .winter {
-    background-color: aliceblue;
+  background-color: aliceblue;
 }
 
 .summer {
-    background-color: orange;
+  background-color: orange;
+}
+
+.autumn {
+  background-color: brown;
+}
+
+.spring {
+  background-color: lightgreen;
 }
